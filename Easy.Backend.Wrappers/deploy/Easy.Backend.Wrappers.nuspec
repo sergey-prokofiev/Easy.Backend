@@ -2,7 +2,7 @@
 <package>
     <metadata>
         <id>Easy.Backend.Wrappers</id>
-        <version>1.0.0</version>
+        <version>1.0.1</version>
         <authors>Sergey Prokofiev</authors>
         <owners>Sergey Prokofiev</owners>
         <licenseUrl>https://github.com/sergey-prokofiev/Easy.Backend/blob/master/LICENSE</licenseUrl>
