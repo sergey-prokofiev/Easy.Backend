@@ -1,20 +1,19 @@
 <?xml version="1.0"?>
-<package >
-  <metadata>
-    <id>Package</id>
-    <version>1.0.0</version>
-    <authors>sp</authors>
-    <owners>sp</owners>
-    <licenseUrl>http://LICENSE_URL_HERE_OR_DELETE_THIS_LINE</licenseUrl>
-    <projectUrl>http://PROJECT_URL_HERE_OR_DELETE_THIS_LINE</projectUrl>
-    <iconUrl>http://ICON_URL_HERE_OR_DELETE_THIS_LINE</iconUrl>
-    <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>Package description</description>
-    <releaseNotes>Summary of changes made in this release of the package.</releaseNotes>
-    <copyright>Copyright 2017</copyright>
-    <tags>Tag1 Tag2</tags>
-    <dependencies>
-      <dependency id="SampleDependency" version="1.0" />
-    </dependencies>
-  </metadata>
+<package>
+    <metadata>
+        <id>Easy.Backend.Wrappers</id>
+        <version>1.0.0</version>
+        <authors>Sergey Prokofiev</authors>
+        <owners>Sergey Prokofiev</owners>
+        <licenseUrl>https://github.com/sergey-prokofiev/Easy.Backend/blob/master/LICENSE</licenseUrl>
+        <projectUrl>https://github.com/sergey-prokofiev/Easy.Backend</projectUrl>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <description>Wrappers on static resources that simplify TDD and unit testing in dayly development</description>
+        <releaseNotes>Initial release</releaseNotes>
+        <copyright>Copyright 2017</copyright>
+        <tags>Easy.Backend</tags>
+    </metadata>
+    <files>
+    <file src="..\bin\Release\**\Easy.Backend.Wrappers.dll" target="lib" />
+ </files>
 </package>
