@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Easy.Wrappers
+namespace Easy.Backend.Wrappers
 {
 	/// <inheritdoc />
 	public class DateTimeWrapper : IDateTimeWrapper

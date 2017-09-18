@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace Easy.Wrappers
+namespace Easy.Backend.Wrappers
 {
 	public class TaskWrapper : ITaskWrapper
 	{

@@ -4,5 +4,6 @@
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="Common.Logging" Version="3.4.1" />
+    <PackageReference Include="Easy.Backend.Wrappers" Version="1.0.0" />
   </ItemGroup>
 </Project>

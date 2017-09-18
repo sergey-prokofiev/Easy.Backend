@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Easy.Wrappers
+namespace Easy.Backend.Wrappers
 {
 	/// <summary>
 	/// Wraps date time static members to be reused for testing.

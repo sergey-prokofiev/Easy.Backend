@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace Easy.Wrappers
+namespace Easy.Backend.Wrappers
 {
 	/// <summary>
 	/// A wrapepr for file system operations

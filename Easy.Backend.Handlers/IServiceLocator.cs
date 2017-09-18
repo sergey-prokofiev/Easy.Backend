@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Easy.Handlers
+namespace Easy.Backend.Handlers
 {
 	/// <summary>
 	/// Service locator that resolves previously registered instancers of objects.

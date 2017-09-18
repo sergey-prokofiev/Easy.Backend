@@ -1,7 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
 
-namespace Easy.Wrappers
+namespace Easy.Backend.Wrappers
 {
 	/// <summary>
 	/// Wraps static thread calls

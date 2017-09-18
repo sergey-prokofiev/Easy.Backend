@@ -1,6 +1,7 @@
 ﻿using System;
+using Easy.Wrappers;
 
-namespace Easy.Handlers
+namespace Easy.Backend.Handlers
 {	
 	/// <inheritdoc />
 	/// <summary>
@@ -19,7 +20,8 @@ namespace Easy.Handlers
 			var handler = String.IsNullOrEmpty(resolverHint)
 				? _serviceLocator.Resolve<IEmptyResultHandler<TInput, TContext>>()
 				: _serviceLocator.Resolve<IEmptyResultHandler<TInput, TContext>>(resolverHint);
-
+			var wrapper = new FileSystemWrapper();
+			wrapper.CreateTempEmptyFolder();
 			handler.Handle(input, context);
 		}		
 	}

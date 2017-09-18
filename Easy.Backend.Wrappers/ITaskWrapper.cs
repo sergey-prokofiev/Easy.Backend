@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace Easy.Wrappers
+namespace Easy.Backend.Wrappers
 {
 	/// <summary>
 	/// Wraps static methods of Task class for unit testing 

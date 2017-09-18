@@ -1,4 +1,4 @@
-﻿namespace Easy.Handlers
+﻿namespace Easy.Backend.Handlers
 {
 	/// <summary>
 	/// Empty object that might be returned by handlers to indicate that 'nothing' should be returned.

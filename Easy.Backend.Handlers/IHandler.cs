@@ -1,4 +1,4 @@
-﻿namespace Easy.Handlers
+﻿namespace Easy.Backend.Handlers
 {
 	/// <summary>
 	/// Handler of some input. Takes input and context and convert it to output.

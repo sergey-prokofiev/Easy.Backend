@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Threading;
 
-namespace Easy.Wrappers
+namespace Easy.Backend.Wrappers
 {
 	public class ThreadWrapper : IThreadWrapper
 	{

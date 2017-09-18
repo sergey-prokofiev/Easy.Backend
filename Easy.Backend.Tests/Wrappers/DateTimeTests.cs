@@ -1,8 +1,8 @@
 ﻿using System;
-using Easy.Wrappers;
+using Easy.Backend.Wrappers;
 using NUnit.Framework;
 
-namespace Easy.Handlers.Tests.Wrappers
+namespace Easy.Backend.Tests.Wrappers
 {
 	[TestFixture]
 	public class DateTimeTests
