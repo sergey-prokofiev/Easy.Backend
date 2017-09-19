@@ -9,5 +9,10 @@
 		/// Identifies if work interruption was requested
 		/// </summary>
 		bool InterruptionRequested { get; }
+		
+		/// <summary>
+		/// String that hepls to resolve a correct handler for a particular input 
+		/// </summary>
+		string ResolverHint { get; set; }
 	}
 }

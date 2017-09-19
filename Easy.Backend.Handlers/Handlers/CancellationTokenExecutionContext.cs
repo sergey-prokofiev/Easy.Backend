@@ -14,6 +14,8 @@ namespace Easy.Backend.Handlers.Handlers
 		}
 		
 		public bool InterruptionRequested => Token.IsCancellationRequested;
+		
+		public string ResolverHint { get; set; }
 
 		public CancellationToken Token { get; }
 	}

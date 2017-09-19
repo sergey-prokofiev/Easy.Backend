@@ -1,8 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Threading.Tasks;
 using Common.Logging;
-using Easy.Backend.Wrappers;
+using Easy.Backend.Handlers.TasksManagement;
 
 namespace Easy.Backend.Handlers.Handlers
 {
@@ -18,22 +17,15 @@ namespace Easy.Backend.Handlers.Handlers
 	public class ConcurrentHandler<TInput, TContext> : IHandler<TInput, EmptyObject, TContext>
 		where TContext: CancellationTokenExecutionContext
 	{
-		private readonly ITaskWrapper _taskWrapper;
 		private readonly List<IHandler<TInput, EmptyObject, CancellationTokenExecutionContext>> _innerHandlers;
-		private readonly TaskScheduler _scheduler;
-		private readonly TimeSpan _waitTimeout;
-		private readonly TaskCreationOptions _taskCreationOptions;
+		private readonly ITasksManager _tasksManager;
 
 		private static readonly ILog _logger = LogManager.GetLogger<ConcurrentHandler<TInput, TContext>>();
 
 		public ConcurrentHandler(IEnumerable<IHandler<TInput, EmptyObject, CancellationTokenExecutionContext>> innerHandlers,
-			ITaskWrapper taskWrapper, TaskScheduler scheduler, TimeSpan waitTimeout, 
-			TaskCreationOptions taskCreationOptions = TaskCreationOptions.PreferFairness)
+			ITasksManager tasksManager)
 		{
-			_taskWrapper = taskWrapper;
-			_scheduler = scheduler;
-			_waitTimeout = waitTimeout;
-			_taskCreationOptions = taskCreationOptions;
+			_tasksManager = tasksManager;
 			_innerHandlers = new List<IHandler<TInput, EmptyObject, CancellationTokenExecutionContext>>(innerHandlers);
 		}
 
@@ -42,12 +34,11 @@ namespace Easy.Backend.Handlers.Handlers
 			var tasks = new List<Task>(_innerHandlers.Count);
 			foreach (var h in _innerHandlers)
 			{
-				var t = _taskWrapper.Start(() => h.Handle(input, context),
-					context.Token, _taskCreationOptions, _scheduler);
+				var t = _tasksManager.StartTask(() => h.Handle(input, context), context.Token);
 				tasks.Add(t);
 				_logger.Trace($"Handler '{h}' was started to handle an input '{input}'");
 			}
-			_taskWrapper.WaitAll(tasks, _waitTimeout);
+			_tasksManager.WaitAllTasks(tasks);
 			_logger.Trace("All concurrent handlers were successfully finished");
 			return EmptyObject.Default;
 		}
