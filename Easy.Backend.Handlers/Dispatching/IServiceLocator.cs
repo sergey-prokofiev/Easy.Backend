@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace Easy.Backend.Handlers.Dispatching
 {
@@ -23,18 +24,11 @@ namespace Easy.Backend.Handlers.Dispatching
 		T Resolve<T>(string name);
 
 		/// <summary>
-		/// Resolve an instance with default registration
+		/// Resolves all registrations for a type.
 		/// </summary>
-		/// <typeparam name="T">Instance type</typeparam>
-		/// <returns>Resolved instance</returns>
-		object Resolve(Type type);
-
-		/// <summary>
-		/// Resolve an instance with named registration
-		/// </summary>
-		/// <typeparam name="T">Instance type</typeparam>
-		/// <returns>Resolved instance</returns>
-		object Resolve(Type type, string name);
+		/// <typeparam name="T"></typeparam>
+		/// <returns>Resolved instances</returns>
+		IReadOnlyCollection<T> ResolveAll<T>();
 
 	}
 }
