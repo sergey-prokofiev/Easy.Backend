@@ -8,13 +8,13 @@ namespace Easy.Backend.Handlers.Handlers
 	/// </summary>
 	public class CancellationTokenExecutionContext : IExecutionContext
 	{
-		private readonly CancellationToken _token;
-
 		public CancellationTokenExecutionContext(CancellationToken token)
 		{
-			_token = token;
+			Token = token;
 		}
 		
-		public bool InterruptionRequested => _token.IsCancellationRequested;
+		public bool InterruptionRequested => Token.IsCancellationRequested;
+
+		public CancellationToken Token { get; }
 	}
 }
