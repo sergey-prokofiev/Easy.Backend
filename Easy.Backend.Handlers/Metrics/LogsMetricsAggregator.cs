@@ -10,11 +10,21 @@ namespace Easy.Backend.Handlers.Metrics
 	/// </summary>
 	public class LogsMetricsAggregator: IMetricsAggregator
 	{
-		private static readonly ILog _logger = LogManager.GetLogger<Dispatcher>();
+		private static readonly ILog _logger = LogManager.GetLogger<LogsMetricsAggregator>();
 
-		public void AddDispatchedInput(Type inputType)
+		public void AddDispatchedInput(Type inputType, Type handlerType)
 		{
-			_logger.Info($"Input of type {inputType} was processed");
+			_logger.Info($"Input of type {inputType} was dispatched to {handlerType}");
+		}
+
+		public void AddProcessedInput(Type inputType, Type handlerType)
+		{
+			_logger.Info($"Input of type {inputType} was processed by {handlerType}");
+		}
+
+		public void AddErrorProcessingInput(Type inputType)
+		{
+			_logger.Info($"Input of type {inputType} was NOT processed");
 		}
 	}
 }

@@ -6,7 +6,7 @@
 	/// <typeparam name="TInput">Type of input</typeparam>
 	/// <typeparam name="TContext">Type of context. It can be CancellationToken, StackTrace, TranscationScope etc.</typeparam>
 	/// <typeparam name="TOutput">Type of output. Use EmptyObject if nothing should be returned</typeparam>
-	public interface IHandler<in TInput, in TContext, out TOutput>
+	public interface IHandler<in TInput, out TOutput, in TContext> where TContext: IExecutionContext
 	{
 		/// <summary>
 		/// Handles input according to context

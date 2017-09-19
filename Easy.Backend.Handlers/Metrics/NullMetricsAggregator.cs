@@ -8,7 +8,17 @@ namespace Easy.Backend.Handlers.Metrics
 	/// </summary>
 	public class NullMetricsAggregator: IMetricsAggregator
 	{
-		public void AddDispatchedInput(Type inputType)
+		public void AddDispatchedInput(Type inputType, Type handlerType)
+		{
+			//do nothing
+		}
+
+		public void AddProcessedInput(Type inputType, Type handlerType)
+		{
+			// do nothing
+		}
+
+		public void AddErrorProcessingInput(Type inputType)
 		{
 			//do nothing
 		}
