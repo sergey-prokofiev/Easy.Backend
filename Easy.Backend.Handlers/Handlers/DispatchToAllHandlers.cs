@@ -21,7 +21,7 @@ namespace Easy.Backend.Handlers.Handlers
 		
 		public EmptyObject Handle(TInput input, TContext context)
 		{
-			_logger.Trace($"Dispatching input '{input}' with context '{context}' to handler");
+			_logger.Trace($"Dispatching input '{input}' with context '{context}' to all handlers");
 			_dispatcher.DispatchToAllHandlers(input, context);
 			return EmptyObject.Default;
 		}
