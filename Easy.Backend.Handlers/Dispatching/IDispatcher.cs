@@ -1,4 +1,4 @@
-﻿namespace Easy.Backend.Handlers
+﻿namespace Easy.Backend.Handlers.Dispatching
 {
 	/// <summary>
 	/// Dispatch input to a handler. It is assumed that one or more handlers are registered in IServiceLocator.

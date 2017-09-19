@@ -1,4 +1,4 @@
-﻿namespace Easy.Backend.Handlers
+﻿namespace Easy.Backend.Handlers.Handlers
 {
 	/// <inheritdoc />
 	/// <summary>

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Easy.Backend.Handlers
+namespace Easy.Backend.Handlers.Metrics
 {
 	/// <inheritdoc />
 	/// <summary>

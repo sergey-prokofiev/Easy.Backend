@@ -1,7 +1,9 @@
 ﻿using System;
 using Common.Logging;
+using Easy.Backend.Handlers.Handlers;
+using Easy.Backend.Handlers.Metrics;
 
-namespace Easy.Backend.Handlers
+namespace Easy.Backend.Handlers.Dispatching
 {	
 	/// <inheritdoc />
 	/// <summary>
