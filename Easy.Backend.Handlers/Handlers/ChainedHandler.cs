@@ -11,7 +11,7 @@ namespace Easy.Backend.Handlers.Handlers
 	/// </summary>
 	/// <typeparam name="TInput">Input type</typeparam>
 	/// <typeparam name="TIntermediate">Output of first handler and input of second</typeparam>
-	/// <typeparam name="TOutput">Output type of secondhandler</typeparam>
+	/// <typeparam name="TOutput">Output type of second handler</typeparam>
 	/// <typeparam name="TContext">Context</typeparam>
 	public class ChainedHandler<TInput, TIntermediate, TOutput, TContext> : IHandler<TInput, TOutput, TContext>
 		where TContext : IExecutionContext

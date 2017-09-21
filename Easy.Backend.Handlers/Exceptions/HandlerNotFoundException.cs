@@ -3,6 +3,9 @@ using System.Runtime.Serialization;
 
 namespace Easy.Backend.Handlers.Exceptions
 {
+	/// <summary>
+	/// Exception thrown if a handler wan not registered and not found in th DI container
+	/// </summary>
 	[Serializable]
 	public class HandlerNotFoundException : Exception
 	{
